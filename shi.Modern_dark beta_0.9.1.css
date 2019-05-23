@@ -280,7 +280,7 @@ body {
 
 
 /* Настройки */
-------------------------------------------------------------
+/* ------------------------------------------------------------ */
 
 
 
@@ -885,6 +885,7 @@ header.head a.edit:active,
 .l-top_menu-v2.is-search-focus .global-search input {
   width: 100%;
   border: 1px solid transparent;
+  background: rgba(0, 0, 0, .4);
   padding: 1px 42px 0 32px;
   line-height: 28px;
 }
@@ -899,7 +900,7 @@ header.head a.edit:active,
 }
 
 .l-top_menu-v2.is-search-focus .global-search .search-marker {
-  color: rgb(var(--c1));
+  color: #fff;
   line-height: 40px;
 }
 
@@ -912,15 +913,15 @@ header.head a.edit:active,
 }
 
 .l-top_menu-v2 .global-search .clear {
-  color: rgb(var(--c1));
+  color: #fff;
 }
 
 .l-top_menu-v2 .global-search .clear:hover {
-  color: rgb(var(--c2));
+  color: rgb(var(--c1));
 }
 
 .l-top_menu-v2 .global-search .clear:active {
-  color: rgb(var(--c3));
+  color: rgb(var(--c2));
 }
 
 .l-top_menu-v2 .global-search .search-results {
@@ -1335,11 +1336,6 @@ header.head a.edit:active,
   color: rgb(var(--c2));
 }
 
-.p-profiles-show .about .item-edit:before,
-.p-club_pages-show .item-edit:before {
-  content: 'create';
-}
-
 .p-profiles-show .about .item-edit {
   margin-top: -8px;
   display: block;
@@ -1395,6 +1391,8 @@ header.head a.edit:active,
 .headline,
 .midheadline,
 .subheadline {
+  display: inline-block;
+  width: 100%;
   color: var(--t1);
   background: transparent;
   border-left: none;
@@ -1403,7 +1401,6 @@ header.head a.edit:active,
   text-align: center;
   font-size: 18px;
   padding: 0 0 18px 0;
-  margin-bottom: 18px !important;
   line-height: normal;
 }
 
@@ -1570,7 +1567,7 @@ header.head a.edit:active,
 }
 
 .p-profiles-show .cc-friends {
-  margin: 28px 0 -4px;
+  margin: 8px 0 -4px;
 }
 
 .b-user.avatar img,
@@ -1760,7 +1757,7 @@ header.head a.edit:active,
 }
 
 .l-footer:before {
-  content: 'shi.Modern_dark beta_0.9';
+  content: 'shi.Modern_dark beta_0.9.1';
   display: block;
   float: left;
   position: static;
@@ -2048,7 +2045,7 @@ header.head a.edit:active,
 }
 
 .b-user16 {
-  background: rgba(var(--c1), .1);
+  border: 1px solid var(--b3);
   padding: 0 6px;
   border-radius: 4px;
   cursor: pointer;
@@ -2060,6 +2057,7 @@ header.head a.edit:active,
 .b-show_more-more .friend-rate .b-user16,
 .b-menu-line.friend-rate .b-user16 {
   background: none;
+  border: none;
 }
 
 .b-menu-line.friend-rate .b-user16 a {
@@ -2486,6 +2484,7 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
   content: 'reply';
 }
 
+.p-profiles-show .about .item-edit:before,
 .buttons .item-edit:before {
   content: 'edit';
 }
@@ -2660,6 +2659,7 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 .b-status-line .section.additional .b-review_votes::before {
   display: inline-block !important;
   vertical-align: middle;
+  color: var(--t1);
 }
 
 .b-status-line .section.created_at time:before {
@@ -2714,7 +2714,7 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 }
 
 .b-form {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .b-shiki_editor aside.buttons {
@@ -2735,6 +2735,7 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 .b-shiki_editor .email.links p,
 .b-shiki_editor .upload.links p {
   padding: 0 10px 0;
+  overflow: auto;
 }
 
 .b-shiki_editor .links label,
@@ -3052,8 +3053,13 @@ code {
   position: relative;
 }
 
+.b-quote .quoteable a {
+  margin-right: 4px;
+}
+
 .b-quote .quoteable .b-user16 {
   background: none;
+  border: none;
   padding-left: 4px;
   margin-left: -6px;
 }
@@ -3066,14 +3072,28 @@ code {
   display: none;
 }
 
-.b-user16:hover,
 .b-user16:hover a {
   color: rgb(var(--c2));
 }
 
-.b-user16:active,
+.b-user16:hover {
+  color: rgb(var(--c2));
+  background: rgba(var(--c2), .1);
+  border-color: rgb(var(--c2));
+}
+
+.b-user16:hover span {
+  text-decoration: none;
+}
+
 .b-user16:active a {
   color: rgb(var(--c3));
+}
+
+.b-user16:active {
+  color: rgb(var(--c3));
+  background: rgba(var(--c3), .2);
+  border-color: rgb(var(--c3));
 }
 
 .b-source .contributors .b-user16,
@@ -3158,7 +3178,7 @@ code {
   padding: 20px;
   border: 1px solid var(--b3);
   border-radius: 4px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .headline.linkheadline > a,
@@ -3168,7 +3188,7 @@ code {
 }
 
 .p-dashboards-show .cc-second {
-  margin-bottom: 52px;
+  margin-bottom: 20px;
 }
 
 .p-dashboards-show .cc-second .cc-inner {
@@ -3209,21 +3229,16 @@ code {
   border-radius: 4px;
 }
 
+.p-dashboards-show .cc-news .c-news_topics:nth-child(2n+1) {
+  width: 67.95%;
+  margin-right: 20px;
+}
+
+.p-dashboards-show .cc-news .c-news_topics .b-topic,
 .p-dashboards-show .cc-news .c-generated_news .b-topic {
-  padding: 0 !important;
-  border: none !important;
-}
-
-.p-dashboards-show .c-news_topics.m0 {
-  background: var(--b2);
-  padding: 20px;
-  border: 1px solid var(--b3);
-  border-radius: 4px;
-}
-
-.p-dashboards-show .cc-news .c-news_topics .b-topic {
   border: none !important;
   padding: 0 !important;
+  background: transparent;
 }
 
 .b-abuse_request .marker,
@@ -3363,6 +3378,8 @@ aside.l-menu,
 .p-characters-seyu .l-content,
 .p-people-index .cc-8,
 .p-people-favoured .l-content,
+.p-people-roles .l-content,
+.p-people-works .l-content,
 .p-contests-show .l-content .contest.finished,
 .p-contests .proposing .block,
 .p-animes-cosplay .l-content .subheadline,
@@ -3416,6 +3433,7 @@ aside.l-menu,
 .p-dialogs-index .block.m0,
 .p-messages-index .block.m0,
 .p-dialogs-show .block.m0,
+.p-dashboards-show .c-news_topics.m0,
 .p-clubs-index .b-clubs.searchable-collection,
 .p-clubs-index .b-clubs.b-search-results,
 .p-user_history-index .block.m0,
@@ -3453,7 +3471,8 @@ aside.l-menu,
 }
 
 .p-translations .animes {
-  margin: 0 0 20px;
+  max-width: 380px;
+  margin: 0 5px 20px;
 }
 
 .p-genres .b-table {
@@ -3685,18 +3704,26 @@ aside.l-menu,
 .p-clubs-edit .subheadline-input[type=text],
 .p-clubs-edit .subheadline-input[type=url] {
   background: var(--b1);
+  color: var(--t2);
   display: block;
   position: absolute;
   left: 0;
   right: 0;
   top: 37px;
   width: 100% !important;
-  padding: 4px 12px;
+  padding: 8px 12px;
   border-radius: 0 0 4px 4px;
+  box-shadow: inset 0 0 0 0 rgba(var(--c1), .5);
+  transition: .25s ease;
+}
+
+.p-clubs-edit .subheadline-input[type=text]:focus,
+.p-clubs-edit .subheadline-input[type=url]:focus {
+  box-shadow: inset 0 0 0 1px rgb(var(--c1));
 }
 
 .p-clubs-edit .block.edit-page .subheadline {
-  margin-bottom: 28px !important;
+  margin-bottom: 38px !important;
 }
 
 .b-entry-info .line .value {
@@ -3794,6 +3821,7 @@ aside.l-menu,
 .b-add_to_list .trigger-arrow:before {
   content: 'arrow_drop_down';
 }
+
 .b-add_to_list.expanded .trigger-arrow:before {
   content: 'arrow_left';
 }
@@ -3961,8 +3989,9 @@ header.head h2 a.back:before,
 .b-subposter-action.broadcast:before,
 .b-subposter-action.upload:before,
 .b-subposter-action.invite:before,
-.b-subposter-action.leave:before {
-  color: var(--t1);
+.b-subposter-action.leave:before,
+.b-spoiler .content .before:before,
+.b-spoiler .content .after:before {
   display: block;
   width: 1em !important;
   font-family: 'Material Icons' !important;
@@ -4196,7 +4225,7 @@ header.head h2 a.back:hover:before {
 .p-statistics-index .b-topic,
 .p-pages-about .b-topic,
 .p-pages-ongoings .b-topic {
-  margin-top: -18px;
+  margin-top: -6px;
   padding-top: 0px !important;
   border-top: none !important;
   border-radius: 0 0 4px 4px;
@@ -4268,10 +4297,12 @@ header.head h2 a.back:hover:before {
 .b-spoiler label {
   color: rgb(var(--c1));
   cursor: pointer;
-  font-weight: bold;
   border: none !important;
   font-size: inherit;
-  letter-spacing: .8px;
+  letter-spacing: 1.2px;
+  padding: 0 2px 1px;
+  border-radius: 2px;
+  background: rgba(var(--c1), .2);
 }
 
 .b-spoiler label:hover,
@@ -4302,9 +4333,12 @@ header.head h2 a.back:hover:before {
   letter-spacing: .8px;
 }
 
-.b-spoiler .content .before:before,
+.b-spoiler .content .before:before {
+  content: 'chevron_left';
+}
+
 .b-spoiler .content .after:before {
-  content: 'SPOILER';
+  content: 'chevron_right';
 }
 
 input.subheadline-input.search {
@@ -4317,6 +4351,7 @@ input.subheadline-input.search {
   border: none;
   border-radius: 2px;
   padding: 6px 12px;
+  color: var(--t2);
 }
 
 .p-user_rates-index .l-content > .subheadline.m10,
@@ -4722,6 +4757,7 @@ td.name {
 .b-input select,
 .b-input button,
 .b-input textarea {
+  color: var(--t2);
   border-radius: 4px;
   padding: 8px 12px;
   border: 1px solid var(--b3);
@@ -4763,6 +4799,12 @@ header.head > .b-breadcrumbs > span {
 
 header.head > .b-breadcrumbs > span:after {
   content: '·';
+}
+
+h3 {
+  color: var(--t1);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--b3);
 }
 
 .p-user_rates-index header.head a.misc,
@@ -5084,6 +5126,10 @@ header.head > .b-breadcrumbs > span:after {
   position: initial !important;
   width: auto !important;
   border-radius: 2px !important;
+}
+
+.b-offtopic_marker:before {
+  background: rgba(245, 142, 187, .3);
 }
 
 .b-summary_marker:before {
@@ -5519,7 +5565,8 @@ img.b-poster {
 }
 
 .b-comments-notifier {
-  background: rgb(var(--c1));
+  background: transparent;
+  color: rgba(255, 255, 255, .6);
   font-weight: bold;
   border-radius: 100%;
   color: white;
@@ -5530,13 +5577,15 @@ img.b-poster {
   min-width: 25px;
   padding: 0 4px;
   right: 0;
-  top: 42px !important;
+  top: 1px !important;
   text-align: center;
   position: fixed !important;
+  z-index: 99999;
 }
 
 .b-comments-notifier:hover {
-  background-color: rgb(var(--c2));
+  background-color: transparent;
+  color: #fff;
 }
 
 .b-image .edit:before {
@@ -5680,13 +5729,17 @@ img.b-poster {
   color: rgb(var(--c1));
 }
 
-.p-animes .item-edit:before {
+.p-animes .item-edit:before,
+.p-characters .item-edit:before,
+.p-club_pages-show .item-edit:before {
   content: 'create'; 
   padding: 10px;
   border-radius: 4px;
 }
 
-.p-animes .item-edit:hover:before {
+.p-animes .item-edit:hover:before,
+.p-characters .item-edit:before,
+.p-club_pages-show .item-edit:before {
   background: var(--d2);
 }
 
@@ -5713,9 +5766,9 @@ img.b-poster {
 .p-animes-coub .b-coub:first-child {
   border: 1px solid var(--b3);
   border-top: none;
-  margin-top: -18px !important;
+  margin-top: -17px !important;
   background: var(--b2);
-  padding: 20px;
+  padding: 6px 20px 20px;
   border-radius: 0 0 4px 4px;
 }
 
@@ -6485,7 +6538,7 @@ a.b-button {
 .p-club_topics-index .l-content .b-topic:first-child {
   border: 1px solid var(--b3) !important;
   border-top: none !important;
-  margin-top: -18px !important;
+  margin-top: -13px !important;
   background: var(--b2);
   padding: 20px !important;
   border-radius: 0 0 4px 4px;
@@ -6706,6 +6759,37 @@ a.b-button {
   font-family: 'Arial', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.b-contest_match .votes-percents {
+  line-height: 24px;
+}
+
+.b-contest_match .votes-percents .left-part {
+  background-color: #3f8bbf;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.b-contest_match .votes-percents .right-part {
+  background-color: #dc5353;
+  height: 24px;
+}
+
+.b-contest_match .votes-percents .right-part:before {
+  border-right: #dc5353;
+}
+
+.b-contest_match .votes-percents .left-part:hover {
+  background-color: #62a8d8;
+}
+
+.b-contest_match .votes-percents .left-part:hover .right-part {
+  background-color: #ea7a79;
+}
+
+.b-contest_match .votes-percents .left-part:hover .right-part:before {
+  border-right: #ea7a79;
 }
 
 .p-contests .proposing .new_contest_suggestion {
