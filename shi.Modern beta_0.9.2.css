@@ -213,21 +213,21 @@ body {
 
 
 /* Друзья *
-.p-profiles-show .profile-content .c-right .cc-2a > .c-column:nth-child(2n+1) {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:nth-child(2n+1) {
   display: none !important;
 }
 /* Друзья */
 
 
 /* Клубы *
-.p-profiles-show .profile-content .cc-2a > .c-column:last-child {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
   display: none !important;
 }
 /* Клубы */
 
 
 /* Избранное *
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child {
   display: none !important;
 }
 /* Избранное */
@@ -503,7 +503,8 @@ header.head a.edit,
 .b-ban .abuser,
 .b-collection_item,
 .b-collection_item .delete:hover:before,
-.b-collection_item .drag-handle:hover:before {
+.b-collection_item .drag-handle:hover:before,
+.p-characters .item-edit:hover {
   color: rgb(var(--c1));
 }
 
@@ -631,7 +632,8 @@ header.head a.edit:hover,
 .b-collection_item:hover,
 .b-collection_item .delete:active:before,
 .b-collection_item .drag-handle:active:before,
-.b-club .name-logo:hover .name {
+.b-club .name-logo:hover .name,
+.p-characters .item-edit:active {
   color: rgb(var(--c2));
 }
 
@@ -766,6 +768,16 @@ header.head a.edit:active,
 
 .to-top-fix {
   display: none;
+}
+
+.b-to-top .slide:before {
+  background: rgba(0, 0, 0, .1);
+}
+
+.b-to-top .arrow:before {
+  content: 'expand_less';
+  color: var(--t2);
+  margin-left: 18px;
 }
 
 .tipsy {
@@ -1022,11 +1034,11 @@ header.head a.edit:active,
 .l-top_menu-v2 .menu-dropdown.main .icon-settings:before,
 .l-top_menu-v2 .menu-dropdown.main .icon-site_rules:before,
 .l-top_menu-v2 .menu-dropdown.main .icon-faq:before,
+.l-top_menu-v2 .menu-dropdown.main .icon-clubs:before,
 .l-top_menu-v2 .icon-anime:before,
 .l-top_menu-v2 .icon-manga:before,
 .l-top_menu-v2 .icon-ranobe:before,
 .l-top_menu-v2 .icon-forum:before,
-.l-top_menu-v2 .icon-clubs:before,
 .l-top_menu-v2 .icon-collections:before,
 .l-top_menu-v2 .icon-reviews:before,
 .l-top_menu-v2 .icon-users:before,
@@ -1060,6 +1072,7 @@ header.head a.edit:active,
 .l-top_menu-v2 .icon-manga_list:before,
 .l-top_menu-v2 .icon-mail:before,
 .l-top_menu-v2 .icon-achievements:before,
+.l-top_menu-v2 .icon-clubs:before,
 .l-top_menu-v2 .icon-settings:before,
 .l-top_menu-v2 .icon-site_rules:before,
 .l-top_menu-v2 .icon-faq:before,
@@ -1107,6 +1120,10 @@ header.head a.edit:active,
 
 .l-top_menu-v2 .icon-achievements:before {
   content: 'stars';
+}
+
+.l-top_menu-v2 .icon-clubs:before  {
+  content: 'people';
 }
 
 .l-top_menu-v2 .icon-settings:before {
@@ -1564,11 +1581,11 @@ header.head a.edit:active,
   margin-bottom: 10px;
 }
 
-.p-profiles-show .profile-content .c-right .cc-2a {
+.p-profiles-show .profile-content .c-right > .cc-2a {
   display: contents;
 }
 
-.p-profiles-show .profile-content .c-right .cc-2a > .c-column:nth-child(2n+1) {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:nth-child(2n+1) {
   display: block;
   float: left;
   text-align: center;
@@ -1587,15 +1604,15 @@ header.head a.edit:active,
   width: 36%;
 }
 
-.p-profiles-show.x1200 .profile-content .c-right .cc-2a > .c-column {
+.p-profiles-show.x1200 .profile-content .c-right > .cc-2a > .c-column {
   width: 36%;
 }
 
-.p-profiles-show .profile-content .cc-2.block {
+.p-profiles-show .profile-content > .cc-2.block {
   margin: 0;
 }
 
-.p-profiles-show .profile-content .cc-2a > .c-column:last-child {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
   display: block;
   float: left;
   text-align: center;
@@ -1609,13 +1626,13 @@ header.head a.edit:active,
   border-radius: 4px;
 }
 
-.p-profiles-show .profile-content .cc-2a > .c-column:last-child .b-clubs.one-line .b-club {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child .b-clubs.one-line .b-club {
   float: none;
   margin: 0 5%;
   width: 48px;
 }
 
-.p-profiles-show .profile-content .cc-2a > .c-column:last-child .b-club .logo {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child .b-club .logo {
   border-radius: 4px;
   border: 0 solid;
   transform: scale(1.2);
@@ -1623,36 +1640,36 @@ header.head a.edit:active,
   transition: .5s ease;
 }
 
-.p-profiles-show .profile-content .cc-2a > .c-column:last-child .b-club .logo:hover {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child .b-club .logo:hover {
   border: 2px solid rgb(var(--c1));
   transform: scale(1);
   filter: none;
 }
 
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child {
   display: block;
   float: left;
   vertical-align: middle;
   text-align: center;
   width: 96.5%;
   height: auto;
-  margin: 20px;
+  margin: 20px 20px 0;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
   border-radius: 4px;
 }
 
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child .subheadline {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child .subheadline {
   width: 100%;
 }
 
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child > .cc-favourites {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child > .cc-favourites {
   display: flex;
   flex-wrap: wrap;
 }
 
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child > .cc-favourites .c-column {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child > .cc-favourites .c-column {
   flex-grow: 1;
   flex-shrink: 1;
   margin: 1%;
@@ -1660,14 +1677,14 @@ header.head a.edit:active,
   height: auto;
 }
 
-.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child > .cc-favourites .c-column .image-cutter {
+.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child > .cc-favourites .c-column .image-cutter {
   max-width: 100% !important;
   max-height: 100% !important;
 }
 
 .p-profiles-show .profile-content .block.achievements {
   display: inline-block;
-  margin: 20px;
+  margin: 40px 20px 0;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
@@ -1704,7 +1721,7 @@ header.head a.edit:active,
   display: block;
   position: inherit;
   float: none;
-  margin: 20px;
+  margin: 40px 20px 20px;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
@@ -1744,7 +1761,7 @@ header.head a.edit:active,
 }
 
 .l-footer:before {
-  content: 'shi.Modern beta_0.9.1';
+  content: 'shi.Modern beta_0.9.2';
   display: block;
   float: left;
   position: static;
@@ -2929,6 +2946,10 @@ hr {
   padding-left: 5px;
 }
 
+.tooltip-inner .close {
+  background: var(--b2);
+}
+
 .b-mention s,
 .tooltip-inner .close:hover,
 .tooltip-inner .close:active,
@@ -3961,7 +3982,8 @@ header.head h2 a.back:before,
 .b-subposter-action.invite:before,
 .b-subposter-action.leave:before,
 .b-spoiler .content .before:before,
-.b-spoiler .content .after:before {
+.b-spoiler .content .after:before,
+.b-to-top .arrow:before {
   display: block;
   width: 1em !important;
   font-family: 'Material Icons' !important;
@@ -4272,7 +4294,7 @@ header.head h2 a.back:hover:before {
   letter-spacing: 1.2px;
   padding: 0 2px 1px;
   border-radius: 2px;
-  background: rgba(var(--c1), .2);
+  background: rgba(var(--c1), .14);
 }
 
 .b-spoiler label:hover,
@@ -4301,6 +4323,12 @@ header.head h2 a.back:hover:before {
   border: none !important;
   font-size: inherit;
   letter-spacing: .8px;
+}
+
+.b-spoiler .content .before:before,
+.b-spoiler .content .after:before {
+  display: inline;
+  vertical-align: bottom;
 }
 
 .b-spoiler .content .before:before {
@@ -5382,7 +5410,7 @@ h3 {
 }
 
 .p-club_pages-show .l-content .subheadline-buttons {
-  margin-top: 0;
+  margin-top: -12px;
 }
 
 .b-user.detailed {
@@ -5534,14 +5562,13 @@ img.b-poster {
   color: rgba(255, 255, 255, .6);
   font-weight: bold;
   border-radius: 100%;
-  color: white;
   cursor: pointer;
   height: 25px;
   line-height: 25px;
   margin: 9px 6px !important;
   min-width: 25px;
   padding: 0 4px;
-  right: 0;
+  right: 8px;
   top: 1px !important;
   text-align: center;
   position: fixed !important;
@@ -5703,8 +5730,8 @@ img.b-poster {
 }
 
 .p-animes .item-edit:hover:before,
-.p-characters .item-edit:before,
-.p-club_pages-show .item-edit:before {
+.p-characters .item-edit:hover:before,
+.p-club_pages-show .item-edit:hover:before {
   background: var(--d2);
 }
 
@@ -6247,7 +6274,7 @@ a.b-button {
 .b-ban .id-label,
 .b-log_entry .id-label,
 .b-user_rate_log .id-label {
-  color: initial;
+  color: inherit;
 }
 
 .b-ban > span,
@@ -6514,6 +6541,10 @@ a.b-button {
   border-radius: 4px;
 }
 
+.p-contests-show .l-content .contest .contest_round > .subheadline {
+  margin-bottom: 10px !important;
+}
+
 .p-contests-show .l-content .contest .contest_round .cc-round_stats:last-child {
   margin-top: 30px;
 }
@@ -6723,7 +6754,7 @@ a.b-button {
 }
 
 .b-contest_match .votes-percents .right-part:before {
-  border-right: #dc5353;
+  border-right: 30px solid #dc5353;
 }
 
 .b-contest_match .votes-percents .left-part:hover {
@@ -6735,7 +6766,7 @@ a.b-button {
 }
 
 .b-contest_match .votes-percents .left-part:hover .right-part:before {
-  border-right: #ea7a79;
+  border-right: 30px solid #ea7a79;
 }
 
 .p-contests .proposing .new_contest_suggestion {
@@ -6802,6 +6833,44 @@ a.b-button {
 .own-nominants .variant.suggestion span.b-js-link.delete:active {
   background: rgba(191, 63, 63, 0.15);
   color: #eb4747;
+}
+
+.b-feedback > .hover-activator {
+  height: 40px !important;
+  background: none;
+  top: 170px;
+}
+
+.b-feedback>.marker-positioner>.marker-text {
+  display: none;
+}
+
+.b-feedback > .marker-positioner {
+  height: 40px !important;
+  background: rgba(255, 0, 0, .2);
+  border-radius: 0 50% 50% 0;
+  transition: .25s ease;
+  top: 170px;
+  width: 40px;
+}
+
+.b-feedback>.marker-positioner:after {
+  position: absolute;
+  font-family: 'Material Icons';
+  content: 'error_outline';
+  font-size: 30px;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  color: #e06b6b;
+}
+
+.b-feedback > .marker-positioner:hover {
+  background: rgba(255, 0, 0, .4) !important;
+}
+
+.b-feedback > .marker-positioner:hover:after {
+  color: #ce2828;
 }
 
 
