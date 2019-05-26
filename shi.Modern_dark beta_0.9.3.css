@@ -155,7 +155,7 @@ body {
 
 
 /* Клубы */
-.p-profiles-show .profile-content > .cc-2a > .c-column:last-child {
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
     display: none !important;
 }
 /* Клубы */
@@ -509,10 +509,19 @@ header.head a.edit,
 .b-collection_item,
 .b-collection_item .delete:hover:before,
 .b-collection_item .drag-handle:hover:before,
-.p-animes_collection-index .pagination a.link.link-prev:hover,
-.p-animes_collection-index .pagination a.link.link-next:hover,
-.b-link,
-.p-characters .item-edit:hover {
+.p-characters .item-edit:hover,
+.headline > a:hover:before,
+.midheadline > a:hover:before,
+.subheadline > a:hover:before,
+.headline.linkheadline > a:hover,
+.linkheadline.midheadline > a:hover,
+.linkheadline.subheadline > a:hover,
+.headline.linkheadline > a:hover:before,
+.linkheadline.midheadline > a:hover:before,
+.linkheadline.subheadline > a:hover:before,
+.b-catalog_entry .cover:hover,
+.b-catalog_entry .cover:hover .title,
+.p-user_history-index .history-page .history-interval p .destroy:hover:before {
   color: rgb(var(--c1));
 }
 
@@ -574,22 +583,11 @@ header.head a.edit,
 .p-studios .studio .name:hover,
 .p-translations .animes a:hover,
 .p-statistics-index .forum-nav .sections a:hover,
-.b-catalog_entry .cover:hover,
-.b-catalog_entry .cover:hover .title,
 .b-comment > .inner .was_updated:hover,
 .b-comment header .hash:hover,
 .b-dialog > .inner .was_updated:hover,
 .b-message > .inner .was_updated:hover,
 .b-topic > .inner .was_updated:hover,
-.headline > a:hover:before,
-.midheadline > a:hover:before,
-.subheadline > a:hover:before,
-.headline.linkheadline > a:hover,
-.linkheadline.midheadline > a:hover,
-.linkheadline.subheadline > a:hover,
-.headline.linkheadline > a:hover:before,
-.linkheadline.midheadline > a:hover:before,
-.linkheadline.subheadline > a:hover:before,
 .p-animes-franchise .sticky-tooltip .close:hover,
 .p-mangas-franchise .sticky-tooltip .close:hover,
 .p-contests .match-day .match-link.voted-none > .c-column a:hover,
@@ -641,10 +639,19 @@ header.head a.edit:hover,
 .b-collection_item .delete:active:before,
 .b-collection_item .drag-handle:active:before,
 .b-club .name-logo:hover .name,
-.p-animes_collection-index .pagination a.link.link-prev:active,
-.p-animes_collection-index .pagination a.link.link-next:active,
-.b-link:hover,
-.p-characters .item-edit:active {
+.headline > a:active:before,
+.midheadline > a:active:before,
+.subheadline > a:active:before,
+.headline.linkheadline > a:active,
+.linkheadline.midheadline > a:active,
+.linkheadline.subheadline > a:active,
+.headline.linkheadline > a:active:before,
+.linkheadline.midheadline > a:active:before,
+.linkheadline.subheadline > a:active:before,
+.b-catalog_entry .cover:active,
+.b-catalog_entry .cover:active .title,
+.p-characters .item-edit:active,
+.p-user_history-index .history-page .history-interval p .destroy:active:before {
   color: rgb(var(--c2));
 }
 
@@ -663,9 +670,6 @@ header.head a.edit:hover,
 .p-profiles .profile-head .c-mobile-actions a:active,
 .p-profiles .profile-head .c-mobile-actions span:active,
 .p-profiles .profile-head .c-info .c-additionals div a:active,
-.headline > a:active:before,
-.midheadline > a:active:before,
-.subheadline > a:active:before,
 .p-anime_videos-index .c-videos .video-variant-switcher.active:hover,
 .b-db_entry-note .name-container .name:active,
 .b-club .name:active,
@@ -737,18 +741,11 @@ header.head a.edit:active,
 .p-studios .studio .name:active,
 .p-translations .animes a:active,
 .p-statistics-index .forum-nav .sections a:active,
-.b-catalog_entry .cover:active,
 .b-comment > .inner .was_updated:active,
 .b-comment header .hash:active,
 .b-dialog > .inner .was_updated:active,
 .b-message > .inner .was_updated:active,
 .b-topic > .inner .was_updated:active,
-.headline.linkheadline > a:active,
-.linkheadline.midheadline > a:active,
-.linkheadline.subheadline > a:active,
-.headline.linkheadline > a:active:before,
-.linkheadline.midheadline > a:active:before,
-.linkheadline.subheadline > a:active:before,
 .p-animes-franchise .sticky-tooltip .close:active,
 .p-mangas-franchise .sticky-tooltip .close:active,
 .p-contests .match-day .match-link.voted-none > .c-column a:active,
@@ -773,8 +770,7 @@ header.head a.edit:active,
 .b-user.moderation .info .image-name .name:active,
 .b-ban .abuser:active,
 .b-collection_item:active,
-.b-club .name-logo:active .name,
-.b-link:active {
+.b-club .name-logo:active .name {
   color: rgb(var(--c3));
 }
 
@@ -886,8 +882,8 @@ header.head a.edit:active,
 }
 
 .l-top_menu-v2 .global-search input {
-  background: #fff;
-  color: rgb(var(--c1));
+  background: transparent;
+  color: #fff;
   padding: 0;
   border: none;
   width: 0;
@@ -1548,7 +1544,8 @@ header.head a.edit:active,
   border-bottom: 1px solid var(--b3);
 }
 
-.p-profiles-show .profile-content .activity .bar.vertical .line .x_label {
+.p-profiles-show .profile-content .activity .bar.vertical .line .x_label,
+.p-user_history-index .history-page .history-interval p .destroy:before {
   color: var(--t3);
 }
 
@@ -1666,7 +1663,7 @@ header.head a.edit:active,
   text-align: center;
   width: 96.5%;
   height: auto;
-  margin: 20px 20px 0;
+  margin: 20px;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
@@ -1697,7 +1694,7 @@ header.head a.edit:active,
 
 .p-profiles-show .profile-content .block.achievements {
   display: inline-block;
-  margin: 40px 20px 0;
+  margin: 20px;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
@@ -1734,7 +1731,7 @@ header.head a.edit:active,
   display: block;
   position: inherit;
   float: none;
-  margin: 40px 20px 20px;
+  margin: 20px;
   padding: 20px;
   background: var(--b2);
   border: 1px solid var(--b3);
@@ -1774,7 +1771,7 @@ header.head a.edit:active,
 }
 
 .l-footer:before {
-  content: 'shi.Modern_dark beta_0.9.2';
+  content: 'shi.Modern_dark beta_0.9.3';
   display: block;
   float: left;
   position: static;
@@ -1882,7 +1879,8 @@ header.head a.edit:active,
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a:hover,
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility span.link-replacement:hover,
 .p-profiles .profile-head .b-stats_bar .stat_names .stat_name a:hover,
-.p-profiles .profile-head .c-info .c-additionals div a:hover {
+.p-profiles .profile-head .c-info .c-additionals div a:hover,
+.b-db_entry > .c-about .additional-links .line-container > a:hover {
   background: rgba(var(--c1), 0.05);
   border-color: inherit;
   color: rgb(var(--c1));
@@ -1892,7 +1890,8 @@ header.head a.edit:active,
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a:active,
 .p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility span.link-replacement:active,
 .p-profiles .profile-head .b-stats_bar .stat_names .stat_name a:active,
-.p-profiles .profile-head .c-info .c-additionals div a:active {
+.p-profiles .profile-head .c-info .c-additionals div a:active,
+.b-db_entry > .c-about .additional-links .line-container > a:active {
   background: rgba(var(--c2), 0.15);
   border-color: inherit;
   color: rgb(var(--c2));
@@ -1999,7 +1998,8 @@ header.head a.edit:active,
 }
 
 .p-profiles .profile-head .c-info .c-additionals div span,
-.p-profiles .profile-head .c-info .c-additionals div a {
+.p-profiles .profile-head .c-info .c-additionals div a,
+.b-db_entry > .c-about .additional-links .line-container > a {
   display: inline-block;
   padding: 8px 12px;
   margin: 4px;
@@ -2011,6 +2011,16 @@ header.head a.edit:active,
   color: var(--t1);
   cursor: pointer;
   transition: .25s ease;
+}
+
+.b-db_entry > .c-about .additional-links .line-container > a {
+  padding: 6px 12px;
+}
+
+.b-db_entry > .c-about .additional-links .key,
+.b-db_entry > .c-about .additional-links .line-container > .link:after,
+.b-db_entry > .c-about .additional-links .line-container > a:after {
+  display: none;
 }
 
 .b-topic > .b-comments {
@@ -3008,44 +3018,55 @@ code {
 }
 
 .b-code {
-  background: #2e3538;
+  background: #333;
+}
+
+.b-code:before {
+  background-color: #202020;
 }
 
 .hljs-selector-tag {
-  color: #FF5370;
+  color: #fffbc9;
+}
+
+.hljs-selector-attr {
+  color: #a2de17;
 }
 
 .hljs-selector-id {
-  color: #FAD430;
+  color: #fad430;
 }
 
 .hljs-selector-class {
-  color: #FFCB6B;
+  color: #ffcb6b;
 }
 
-.hljs-selector-pseudo,
+.hljs-selector-pseudo {
+  color: #888cd0;
+}
+
 .hljs-meta {
-  color: #C792EA;
+  color: #dc4747;
 }
 
 .hljs-attribute {
-  color: #80CBC4;
+  color: #30d0c4;
 }
 
 .hljs-built_in {
-  color: #89DDFF;
+  color: #e4a3d3;
 }
 
 .hljs-number {
-  color: #F77669;
+  color: #f157a2;
 }
 
 .hljs-string {
-  color: #C3E88D;
+  color: #a2de17;
 }
 
 .hljs-comment {
-  color: #5C7E8C;
+  color: #b3b3b3;
 }
 
 .b-quote {
@@ -3354,19 +3375,33 @@ aside.l-menu,
   width: 360px !important;
 }
 
-.ac_results, .completable-block {
+.ac_results,
+.completable-block {
   border: 1px solid var(--b3);
   background: var(--b2);
   color: var(--t1);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
+  max-height: 260px;
+  overflow: auto;
 }
 
 .ac_results li {
-  padding: 2px 10px;
+  padding: 6px 10px;
   line-height: 26px;
   border: none;
   margin: 4px 0;
+  background: transparent;
+  color: var(--t1);
+}
+
+.ac_results li:hover {
+  background: var(--d1);
+}
+
+.ac_results .name,
+.completable-block .name {
+  color: var(--t1);
 }
 
 .p-reviews-index .l-content,
@@ -3790,10 +3825,17 @@ aside.l-menu,
 .b-db_entry-variant-list_item > .info .b-user_rate .b-add_to_list .option {
   font-size: 12px;
   padding: 0 10px;
-  border-left-width: 0;
+  border-left-width: 2px;
   line-height: 2.5;
 }
 
+.b-add_to_list .trigger .text,
+.b-add_to_list .option .text {
+  text-decoration: none !important;
+}
+
+.b-add_to_list.planned .trigger,
+.b-add_to_list.planned .option,
 .b-add_to_list.completed .trigger,
 .b-add_to_list.completed .option,
 .b-add_to_list.dropped .trigger,
@@ -3805,39 +3847,60 @@ aside.l-menu,
 .b-add_to_list.rewatching .trigger,
 .b-add_to_list.rewatching .option {
   margin-bottom: 3px;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  border: 2px solid var(--b3);
+  color: var(--t1);
+  background: transparent;
+  padding: 6px 12px; 
+  border-radius: 2px;
+  text-decoration: none !important;
+  transition: .25s ease;
 }
 
-.b-add_to_list.planned .trigger,
-.b-add_to_list.planned .option,
-.b-add_to_list.on_hold .trigger,
-.b-add_to_list.on_hold .option {
-  background: rgba(255, 255, 255, .07);
-  margin-bottom: 3px;
-  border: none;
-  color: var(--t2);
-  padding: 6px 12px;
-  border-radius: 4px;
+.b-add_to_list.planned .option:hover,
+.b-add_to_list.completed .option:hover,
+.b-add_to_list.dropped .option:hover,
+.b-add_to_list.on_hold .option:hover,
+.b-add_to_list.watching .option:hover,
+.b-add_to_list.rewatching .option:hover {
+  color: rgb(var(--c1));
+  border-color: initial;
+  background: rgba(var(--c1), .2);
 }
 
-.b-add_to_list.completed .trigger,
-.b-add_to_list.completed .option {
+.b-add_to_list.planned .trigger:hover,
+.b-add_to_list.on_hold .trigger:hover {
+  color: var(--t1);
+  border-color: initial;
+  background: rgba(255, 255, 255, .2);
+}
+
+.b-add_to_list.completed .trigger:hover {
+  color: #419541;
+  border-color: initial;
   background: rgba(44, 95, 38, 0.3);
 }
 
-.b-add_to_list.dropped .trigger,
-.b-add_to_list.dropped .option {
+.b-add_to_list.dropped .trigger:hover {
+  color: #ff0610;
+  border-color: initial;
   background: rgba(142, 22, 29, 0.3);
 }
 
-.b-add_to_list.watching .trigger,
-.b-add_to_list.watching .option,
-.b-add_to_list.rewatching .trigger,
-.b-add_to_list.rewatching .option {
-  background: rgba(17, 80, 125, 0.3);
+.b-add_to_list.watching .trigger:hover,
+.b-add_to_list.rewatching .trigger:hover {
   color: #1a8bda;
+  border-color: initial;
+  background: rgba(17, 80, 125, 0.3);
+}
+
+.b-add_to_list .option.remove-trigger:hover {
+  color: #f10b0b;
+  border-color: initial;
+  background: rgba(255, 0, 0, .1);
+}
+
+.b-add_to_list .expanded-options .remove-trigger .text {
+  color: inherit;
 }
 
 .b-add_to_list .plus,
@@ -4019,6 +4082,7 @@ header.head h2 a.back:before,
 .b-topic .footer-vote .vote-group .vote:before,
 .p-profiles .profile-head .c-brief header h1.aliases:before,
 .p-profiles .profile-head .c-brief header h1.aliases:after,
+.p-user_history-index .history-page .history-interval p .destroy:before,
 .p-animes .item-new-review:before,
 .p-mangas .item-new-review:before,
 .b-subposter-action.edit-alt:before,
@@ -4028,7 +4092,8 @@ header.head h2 a.back:before,
 .b-subposter-action.leave:before,
 .b-spoiler .content .before:before,
 .b-spoiler .content .after:before,
-.b-to-top .arrow:before {
+.b-to-top .arrow:before,
+.b-lang_trigger:before {
   display: block;
   width: 1em !important;
   font-family: 'Material Icons' !important;
@@ -4134,7 +4199,8 @@ header.head h2 a.back:before {
 }
 
 header.head h1 a.back:hover:before,
-header.head h2 a.back:hover:before {
+header.head h2 a.back:hover:before,
+.b-lang_trigger:hover:before {
   background: var(--d2);
   color: rgb(var(--c1));
 }
@@ -4337,9 +4403,13 @@ header.head h2 a.back:hover:before {
   border: none !important;
   font-size: inherit;
   letter-spacing: 1.2px;
-  padding: 0 2px 1px;
-  border-radius: 2px;
-  background: rgba(var(--c1), .2);
+  padding: 1px 6px 3px;
+  border-radius: 4px;
+  background: rgba(var(--c1), .14);
+}
+
+.b-spoiler label:hover {
+  background: rgba(var(--c2), .3);
 }
 
 .b-spoiler label:hover,
@@ -4348,40 +4418,29 @@ header.head h2 a.back:hover:before {
   color: rgb(var(--c2));
 }
 
-.b-spoiler label:active,
-.b-spoiler .content:active .before,
-.b-spoiler .content:active .after {
+.b-spoiler label:active {
   color: rgb(var(--c3));
+}
+
+.b-spoiler .content {
+  background: rgba(var(--c1), .14);
+  padding: 1px 2px 3px;
+  border-radius: 4px;
+}
+
+.b-spoiler .content:hover {
+  background: rgba(var(--c2), .3);
 }
 
 .b-spoiler .content .inner,
 .b-spoiler .content .inner-prgrph {
   border: none;
+  padding: 4px;
 }
 
 .b-spoiler .content .before,
 .b-spoiler .content .after {
-  color: rgb(var(--c1));
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none !important;
-  font-size: inherit;
-  letter-spacing: .8px;
-}
-
-.b-spoiler .content .before:before,
-.b-spoiler .content .after:before {
-  display: inline;
-  vertical-align: bottom;
-}
-
-.b-spoiler .content .before:before {
-  content: 'chevron_left';
-}
-
-.b-spoiler .content .after:before {
-  content: 'chevron_right';
+  display: none;
 }
 
 input.subheadline-input.search {
@@ -4441,11 +4500,11 @@ input.subheadline-input.search {
 }
 
 .b-catalog_entry-tooltip .inner a.name:hover {
-  color: rgb(var(--c2));
+  color: rgb(var(--c1));
 }
 
 .b-catalog_entry-tooltip .inner a.name:active {
-  color: rgb(var(--c3));
+  color: rgb(var(--c2));
 }
 
 .p-user_rates-index .l-content .b-options-floated.collapse span {
@@ -4717,8 +4776,9 @@ td.name {
   color: inherit;
 }
 
-.p-user_rates-index .list-lines tr .name a:hover {
-  color: rgb(var(--c2));
+.p-user_rates-index .list-lines tr .name a:hover,
+.p-user_rates-index .list-lines a.bubbled.b-link {
+  color: rgb(var(--c1));
 }
 
 .p-user_rates-index[data-locale='en'] .list-lines tr .num[data-order*="kind"] {
@@ -4771,7 +4831,8 @@ td.name {
   padding: 2px 10px;
 }
 
-.item-add {
+.item-add,
+.p-animes .item-new-review:before {
   color: var(--t1);
 }
 
@@ -5457,8 +5518,9 @@ h3 {
 
 .b-user_rate .rate-show .note {
   color: var(--t3);
-  max-height: 220px;
+  max-height: 212px;
   overflow: auto;
+  margin-top: 14px;
 }
 
 .p-clubs-show .l-content .b-topic {
@@ -5756,16 +5818,6 @@ img.b-poster {
   right: 12px;
 }
 
-.p-animes .item-new-review:before {
-  content: 'notes';
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.p-animes .item-new-review:hover:before {
-  background: var(--d2);
-}
-
 .p-animes-summaries .b-options-floated .selected {
   display: none;
 }
@@ -5782,16 +5834,28 @@ img.b-poster {
 
 .p-animes .item-edit:before,
 .p-characters .item-edit:before,
-.p-club_pages-show .item-edit:before {
+.p-club_pages-show .item-edit:before,
+.p-animes .item-new-review:before {
+  color: var(--t1);
   content: 'create'; 
   padding: 10px;
   border-radius: 4px;
 }
 
 .p-animes .item-edit:hover:before,
+.p-animes .item-new-review:before,
 .p-characters .item-edit:hover:before,
 .p-club_pages-show .item-edit:hover:before {
+  color: rgb(var(--c1));
   background: var(--d2);
+}
+
+.p-animes .item-edit:active:before,
+.p-animes .item-new-review:active:before,
+.p-characters .item-edit:active:before,
+.p-club_pages-show .item-edit:active:before {
+  color: rgb(var(--c2));
+  background: var(--d1);
 }
 
 .b-options-floated.r-edit {
@@ -6033,7 +6097,8 @@ img.b-poster {
   content: 'cached';
 }
 
-.p-messages .mass-actions a.b-js-link[href*="/delete_all"]:before {
+.p-messages .mass-actions a.b-js-link[href*="/delete_all"]:before,
+.p-user_history-index .history-page .history-interval p .destroy:before {
   content: 'delete';
 }
 
@@ -6962,6 +7027,95 @@ a.b-button {
   color: #ce2828;
 }
 
+.b-edit_styles .edit_style .style_css .CodeMirror,
+.b-edit_styles .new_style .style_css .CodeMirror {
+  border: var(--b3);
+}
+
+.cm-s-solarized.cm-s-light {
+  background-color: #333;
+  color: #fff;
+  text-shadow: #242424 0 1px;
+}
+
+.cm-s-solarized.cm-s-light .CodeMirror-gutters {
+  background-color: #242424;
+}
+
+.cm-s-solarized.cm-s-light div.CodeMirror-selected {
+  background: #4d4d4d;
+}
+
+.cm-searching {
+  background-color: rgba(140, 17, 17, 0.4);
+}
+
+.cm-s-solarized .cm-tag {
+  color: #fffbc9;
+}
+
+.cm-s-solarized .cm-qualifier {
+  color: #f3c22c;
+}
+
+.cm-s-solarized .cm-type,
+.cm-s-solarized .cm-variable-3 {
+  color: #888cd0;
+}
+
+.cm-s-solarized .cm-property {
+  color: #30d0c4;
+}
+
+.cm-s-solarized .cm-atom {
+  color: #e4a3d3;
+}
+
+.cm-s-solarized .cm-number {
+  color: #f157a2;
+}
+
+.cm-s-solarized .cm-keyword {
+  color: #dc4747;
+}
+
+.cm-s-solarized .cm-variable-2 {
+  color: #7ad439;
+}
+
+.cm-s-solarized .cm-string {
+  color: #a2de17;
+}
+
+.cm-s-solarized .cm-comment {
+  color: #b3b3b3;
+}
+
+.b-nothing_here {
+  color: #da1717;
+  font-size: inherit;
+  text-align: center;
+  font-weight: bold;
+}
+
+.b-lang_trigger {
+  position: absolute;
+  right: 10px;
+  top: -66px;
+  color: var(--t1);
+  font-size: 0;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.b-lang_trigger:before {
+  content: 'g_translate';
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 
 
 /* ---------------------------------------------------------------- */
@@ -6994,7 +7148,9 @@ a.b-button {
 /* Оформление плашки спойлера */
 .p-profiles .about.block .b-spoiler label {
   background: #404040;
-  border: 0;
+  border: none;
+  letter-spacing: 0.6px;
+  font-weight: bold;
   border-radius: 3px;
   color: #999;
 }
@@ -7073,6 +7229,12 @@ a.b-button {
 }
 
 /* Скрываем лишнее */
+.p-profiles .about.block .b-spoiler .content,
+.p-profiles .about.block .b-spoiler .content:hover {
+  background: transparent;
+  padding: 0;
+}
+
 .p-profiles .about.block .b-spoiler .content .before::before,
 .p-profiles .about.block .b-spoiler .content .after {
   display: none;
@@ -7177,3 +7339,18 @@ a.b-button {
 
 /* ---------------------------------------------------------------- */
 /* Ваши наработки */
+
+/* Если у вас закрытый список, то уберите пробел между слешем и звездой -> * /
+.p-profiles .profile-head .b-stats_bar .stat_names .stat_name {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--t1);
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 6px;
+  border: 1px solid var(--b3);
+  border-radius: 2px;
+  transition: .25s ease;
+}
+*/
