@@ -5905,7 +5905,7 @@ img.b-poster {
 .p-animes .item-edit:before,
 .p-animes .item-new-review:before,
 .p-characters .item-edit:before,
-.p-club_pages-show .item-edit:before {
+.p-club_pages-show .subheadline-buttons .item-edit:before {
   color: var(--t1);
   content: 'create'; 
   padding: 10px;
@@ -5915,7 +5915,7 @@ img.b-poster {
 .p-animes .item-edit:hover:before,
 .p-animes .item-new-review:hover:before,
 .p-characters .item-edit:hover:before,
-.p-club_pages-show .item-edit:hover:before {
+.p-club_pages-show .subheadline-buttons .item-edit:hover:before {
   color: rgb(var(--c1));
   background: var(--d2);
 }
@@ -5923,7 +5923,7 @@ img.b-poster {
 .p-animes .item-edit:active:before,
 .p-animes .item-new-review:active:before,
 .p-characters .item-edit:active:before,
-.p-club_pages-show .item-edit:active:before {
+.p-club_pages-show .subheadline-buttons .item-edit:active:before {
   color: rgb(var(--c2));
   background: var(--d1);
 }
