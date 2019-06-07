@@ -1,4 +1,4 @@
-/* Настройки */
+/* -------------------- Настройки -------------------- */
 
 
 /* Цвета */
@@ -29,75 +29,7 @@
 }
 
 
-
-/* Фоновая картинка */
-body {
-  background-image: url()!important;
-}
-
-
-
-/* Псевдо аватарка */
-.p-profiles .profile-head .c-brief .avatar {
-  background-image: url() !important; /* Ссылка на картинку */
-  height: 538px; /* Высота изображения */
-}
-
-
-
-/* Отступы верхнего меню от краев страницы */
-.l-top_menu-v2 {
-  padding-left: 4% !important;
-  padding-right: 4% !important;
-}
-/* Отступы верхнего меню от краев страницы */
-
-
-
-/* Изменить растояние между графиками аниме и манги (отступы от полоски между ними) */
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.anime:after {
-  margin-top: 12px !important; /* Отступ сверху */
-  margin-bottom: 20px !important; /* Отступ снизу */
-}
-
-
-
-/* Переименовывание блоков */
-
-
-/* Время за аниме и мангой */
-.p-profiles-show .lifetime .title .label:before {
-  content: 'Время за аниме и мангой';
-}
-/* Английский вариант */
-.p-profiles-show[data-locale='en'] .lifetime .title .label:before {
-  content: 'Time spent';
-}
-
-
-/* Активность на сайте */
-.p-profiles .profile-head .c-info .c-additionals b:after {
-  content: 'Активность';
-}
-/* Английский вариант */
-.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals b:after {
-  content: 'Activity';
-}
-
-
-/* Блок "Обо мне" */
-.p-profiles-show .profile-content .about.block .subheadline:before {
-  content: 'Информация';
-}
-/* Английский вариант */
-.p-profiles-show[data-locale='en'] .profile-content .about.block .subheadline:before {
-  content: 'Information';
-}
-
-
-
 /* Дополнительные цветные элементы в профиле */
-
 
 /* Полоска аниме */
 .b-stats_bar.anime .bar .first {
@@ -150,9 +82,73 @@ body {
 
 
 
+/* Фоновая картинка */
+body {
+  background-image: url()!important;
+}
+
+
+
+/* Псевдо аватарка */
+.p-profiles .profile-head .c-brief .avatar {
+  background-image: url(https://i.ibb.co/2617DXK/noimageb.png) !important; /* Ссылка на картинку */
+  height: 538px; /* Высота изображения */
+}
+
+
+
+/* Отступы верхнего меню от краев страницы */
+.l-top_menu-v2 {
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+}
+/* Отступы верхнего меню от краев страницы */
+
+
+
+/* Изменить растояние между графиками аниме и манги (отступы от полоски между ними) */
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.anime:after {
+  margin-top: 12px !important; /* Отступ сверху */
+  margin-bottom: 20px !important; /* Отступ снизу */
+}
+
+
+
+/* Переименовывание блоков */
+
+/* Время за аниме и мангой */
+.p-profiles-show .lifetime .title .label:before {
+  content: 'Время за аниме и мангой';
+}
+/* Английский вариант */
+.p-profiles-show[data-locale='en'] .lifetime .title .label:before {
+  content: 'Time spent';
+}
+
+
+/* Активность на сайте */
+.p-profiles .profile-head .c-info .c-additionals b:after {
+  content: 'Активность';
+}
+/* Английский вариант */
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals b:after {
+  content: 'Activity';
+}
+
+
+/* Блок "Обо мне" */
+.p-profiles-show .profile-content .about.block .subheadline:before {
+  content: 'Информация';
+}
+/* Английский вариант */
+.p-profiles-show[data-locale='en'] .profile-content .about.block .subheadline:before {
+  content: 'Information';
+}
+
+
+
 /* Вернуть стандартные эллементы /*
 Удалите нужное правило чтобы вернуть определённый эллемент */
-
 
 /* Клубы */
 .p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
@@ -181,110 +177,7 @@ body {
 }
 /* Вертикальные полоски активности */
 
-
-
-/* Убрать эллементы /*
-Добавьте к свободной звёздочке * слэш */ чтобы убрать нужный вам эллемент */
-
-
-/* История *
-.p-profiles .profile-head .c-history.x3 {
-  display: none !important;
-}
-/* История */
-
-
-/* Полоска аниме *
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.anime {
-  display: none !important;
-}
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.manga {
-  margin-top: 0;
-}
-/* Полоска аниме */
-
-
-/* Полоска манги *
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.manga {
-  display: none !important;
-}
-.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.anime:after {
-  display: none;
-}
-/* Полоска манги */
-
-
-/* Активность *
-.p-profiles .profile-head .c-info .c-additionals {
-  display: none !important;
-}
-/* Активность */
-
-
-/* Друзья *
-.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:nth-child(2n+1) {
-  display: none !important;
-}
-/* Друзья */
-
-
-/* Клубы *
-.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
-  display: none !important;
-}
-/* Клубы */
-
-
-/* Избранное *
-.p-profiles-show .profile-content > .cc-2 > .c-column > .block:last-child {
-  display: none !important;
-}
-/* Избранное */
-
-
-/* Полоска активности *
-.p-profiles-show .profile-content .lifetime {
-  display: none !important;
-}
-.p-profiles-show .profile-content .activity {
-  margin-top: 0;
-}
-/* Полоска активности */
-
-
-/* Вертикальные полоски активности *
-.p-profiles-show .profile-content .activity {
-  display: none !important;
-}
-.p-profiles-show .profile-content .c-column.c-left {
-  padding: 20px;
-}
-/* Вертикальные полоски активности */
-
-
-/* Ачивки *
-.p-profiles-show .profile-content .block.achievements {
-  display: none !important;
-}
-/* Ачивки */
-
-
-/* Блок "Обо мне" *
-.p-profiles-show .profile-content .about.block {
-  display: none !important;
-}
-/* Блок "Обо мне" */
-
-
-/* Лента *
-.p-profiles-show .profile-content > .block:last-child {
-  display: none !important;
-}
-/* Лента */
-
-
-/* Настройки */
-/* ------------------------------------------------------------ */
+/* -------------------- Настройки -------------------- */
 
 
 
@@ -1383,7 +1276,7 @@ header.head a.edit:active,
   padding: 20px 40px;
   border: 1px solid var(--b3);
   border-radius: 4px;
-  width: 94.3%;
+  width: 94.1%;
   float: left;
   overflow: hidden;
   margin-bottom: 10px;
@@ -1779,7 +1672,7 @@ header.head a.edit:active,
 }
 
 .l-footer:before {
-  content: 'shi.Modern_dark 1.0';
+  content: 'shi.Modern_dark 1.0.1';
   display: block;
   float: left;
   position: static;
@@ -3576,6 +3469,7 @@ code {
 .p-profiles-favourites .block.m0,
 .p-profiles-moderation .block.m0,
 .p-achievements-franchise .block.m0,
+.p-achievements-users .block,
 .p-profiles-feed .block.m0,
 .p-profiles-comments .block.m0,
 .p-profiles-summaries .block.m0,
@@ -3886,12 +3780,12 @@ code {
 .tag,
 .b-tag,
 .b-entry-info .line .b-tag {
-  padding: 2px 6px !important;
-  background: rgba(255, 255, 255, 0.06);
-  border: none !important;
-  border-radius: 4px;
-  color: var(--t2);
-  margin: 4px !important;
+  padding: 2px 6px 1px !important;
+  background: transparent;
+  border: 2px solid !important;
+  border-radius: 2px;
+  color: rgb(var(--c1));
+  margin: 2px 4px 3px !important;
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bold;
@@ -3900,12 +3794,12 @@ code {
 .tag:hover,
 .b-tag:hover,
 .b-entry-info .line .b-tag:hover {
-  padding: 2px 6px !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: none !important;
-  border-radius: 4px !important;
-  color: var(--t1) !important;
-  margin: 4px !important;
+  padding: 2px 6px 1px !important;
+  background: rgba(var(--c2), 0.1) !important;
+  border: 2px solid !important;
+  border-radius: 2px !important;
+  color: rgb(var(--c2)) !important;
+  margin: 2px 4px 3px !important;
 }
 
 .b-user_rate .rate-show .rate-number .item-add {
@@ -7234,10 +7128,7 @@ a.b-button {
 
 
 
-/* ---------------------------------------------------------------- */
-/* Прочее */
-
-
+/* -------------------- Прочее -------------------- */
 
 /* Новости и уведомления в два столбца */
 .p-messages-index .b-topic > .b-comments {
@@ -7453,20 +7344,4 @@ a.b-button {
 
 
 
-/* ---------------------------------------------------------------- */
-/* Ваши наработки */
-
-/* Если у вас закрытый список, то уберите пробел между слешем и звездой -> * /
-.p-profiles .profile-head .b-stats_bar .stat_names .stat_name {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 10px;
-  color: var(--t1);
-  cursor: pointer;
-  padding: 4px 8px;
-  margin: 6px;
-  border: 1px solid var(--b3);
-  border-radius: 2px;
-  transition: .25s ease;
-}
-*/
+/* -------------------- Ваши наработки -------------------- */
