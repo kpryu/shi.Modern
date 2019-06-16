@@ -1,0 +1,390 @@
+@import url('https://kpryu.github.io/shi.Modern/test/shi.Modern_t.css');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+/* -------------------- Настройки -------------------- */
+
+
+/* Переменные */
+:root {
+
+    /*　Шрифт */
+
+    --font: 'Ubuntu', sans-serif;
+
+    /*　Основные цвета */
+
+    --c1: 64, 191, 128; /* Основной цвет темы и ссылок */
+    --c2: 82, 224, 153; /* Цвет ссылок и некоторых эллементов при наведении */
+    --c3: 0, 255, 128; /* Цвет ссылок и некоторых эллементов при нажатии */
+
+    /*　Цвета фона */
+
+    --b1: #f5f5f5; /*　Цвет фона страницы */
+    --b2: #fff; /*　Цвет фона блоков */
+    --b3: #ddd; /*　Цвет границ блоков */
+
+    /*　Цвета текста */
+
+    --t1: #333; /*　Цвет заголовков и кнопок */
+    --t2: #333; /*　Цвет текста */
+    --t3: #999; /*　Цвет серого текста */
+
+    /*　Цвета затемнения (используется в некоторых блоках и кнопках) */
+
+    --d1: rgba(0, 0, 0, .1); /*　Цвет сильного затемнения */
+    --d2: rgba(0, 0, 0, .06); /*　Цвет слабого затемнения */
+}
+
+
+/* Дополнительные цветные элементы в профиле */
+
+/* Полоска аниме */
+.b-stats_bar.anime .bar .first {
+    background: linear-gradient(22deg, #40bf80, #bbff99);
+}
+.b-stats_bar.anime .bar .second {
+    background: linear-gradient(22deg, #e6e6e6, #ccc);
+}
+.b-stats_bar.anime .bar .third {
+    background: linear-gradient(112deg, #ccc, #b3b3b3);
+}
+
+
+/* Полоска манги */
+.b-stats_bar.manga .bar .first {
+    background: linear-gradient(22deg, #ffd400, #ff9);
+}
+.b-stats_bar.manga .bar .second {
+    background: linear-gradient(22deg, #e6e6e6, #ccc);
+}
+.b-stats_bar.manga .bar .third {
+    background: linear-gradient(112deg, #ccc, #b3b3b3);
+}
+
+
+/* Полоска активности */
+.b-stats_bar.lifetime .bar .first {
+    background: linear-gradient(22deg, #40bf80, #ffee99);
+}
+.b-stats_bar.lifetime .bar .third {
+    background: linear-gradient(22deg, #e6e6e6, #ccc);
+}
+
+/* Вертикальные полоски */
+.p-profiles-show .profile-content .activity .bar.vertical .line .bar-container .bar {
+    background: linear-gradient(0deg, #40bf80, #ffee99) !important;
+}
+
+
+/* Полоски ачивок */
+.b-achievement .c-about .progress .bar,
+.b-achievement .about .progress .bar {
+    background: linear-gradient(22deg, #40bf80, #bbff99);
+}
+
+
+
+/* Фоновая картинка */
+body {
+    background-image: url() !important;
+}
+
+
+
+/* Псевдо аватарка */
+.p-profiles .profile-head .c-brief .avatar {
+    background-image: url(https://i.ibb.co/TtQh7tb/noimagew.png) !important; /* Ссылка на картинку */
+    height: 538px; /* Высота изображения */
+}
+
+
+
+/* Отступы верхнего меню от краев страницы */
+.l-top_menu-v2 {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+}
+/* Отступы верхнего меню от краев страницы */
+
+
+
+/* Изменить растояние между графиками аниме и манги (отступы от полоски между ними) */
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar.anime:after {
+    margin-top: 12px !important; /* Отступ сверху */
+    margin-bottom: 20px !important; /* Отступ снизу */
+}
+
+
+
+/* Переименовывание блоков */
+
+/* Время за аниме и мангой */
+.p-profiles-show .lifetime .title .label:before {
+    content: 'Время за аниме и мангой';
+}
+/* Английский вариант */
+.p-profiles-show[data-locale='en'] .lifetime .title .label:before {
+    content: 'Time spent';
+}
+
+
+/* Активность на сайте */
+.p-profiles .profile-head .c-info .c-additionals b:after {
+    content: 'Активность';
+}
+/* Английский вариант */
+.p-profiles[data-locale='en'] .profile-head .c-info .c-additionals b:after {
+    content: 'Activity';
+}
+
+
+/* Блок "Обо мне" */
+.p-profiles-show .profile-content .about.block .subheadline:before {
+    content: 'Информация';
+}
+/* Английский вариант */
+.p-profiles-show[data-locale='en'] .profile-content .about.block .subheadline:before {
+    content: 'Information';
+}
+
+
+
+/* Вернуть стандартные эллементы /*
+Удалите нужное правило чтобы вернуть определённый эллемент */
+
+/* Клубы */
+.p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
+    display: none !important;
+}
+
+.p-profiles-show .cc-friends {
+    margin: 14px 0 -4px !important;
+}
+/* Клубы */
+
+
+/* Избранное */
+.p-profiles-show .profile-content .cc-2 > .c-column > .block:last-child {
+    display: none !important;
+}
+/* Избранное */
+
+
+/* Вертикальные полоски активности */
+.p-profiles-show .profile-content .activity {
+    display: none !important;
+}
+.p-profiles-show .profile-content .c-column.c-left {
+    padding: 20px;
+}
+/* Вертикальные полоски активности */
+
+/* -------------------- Прочее -------------------- */
+
+/* Новости и уведомления в два столбца */
+.p-messages-index .b-topic > .b-comments {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.p-messages-index .b-comments .b-message {
+    display: inline-block;
+    width: 48%;
+    max-height: 290px !important;
+    overflow: auto;
+}
+
+.p-messages-index .b-comments .b-message:nth-child(2n+1) {
+    margin-right: calc(50% - 46%);
+}
+/* Новости и уведомления в два столбца */
+
+
+
+/* Спойлеры */
+/* Оформление плашки спойлера */
+.shi-sp .b-spoiler label {
+    background: #e6e6e6;
+    border: none;
+    letter-spacing: 0.6px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #666666;
+}
+
+.shi-sp .b-spoiler:hover label {
+    background: #d9d9d9;
+    color: #000;
+}
+
+.shi-sp .b-spoiler label[style*="none"] {
+    background: linear-gradient(6deg, #40bf75, #eeff99);
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+}
+
+/* Настройки размеров */
+.shi-sp .b-spoiler label,
+.shi-sp .b-spoiler .before {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    height: 40px; /* Высота */
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    text-transform: none;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Невидимая кнопка "Закрыть спойлер" */
+.shi-sp .b-spoiler .before {
+    margin-top: -40px; /* должно соответствовать высоте, указанной выше */
+}
+
+/* Содержимое спойлера */
+.shi-sp .b-spoiler .content .inner {
+    display: block !important;
+    background: #fafafa;
+    min-height: 0;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #e8ebef;
+    border-radius: 3px;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+/* Надпись Открыть/Закрыть сбоку */
+.shi-sp .b-spoiler label::after {
+   content: 'Открыть';
+   background: #eeeeee;
+   border-radius: 3px;
+   padding: 0px 8px;
+   float: right;
+   font-size: 8px;
+   text-transform: uppercase;
+}
+.shi-sp .b-spoiler:hover label::after {
+    background: #f2f2f2;
+    color: #000;
+}
+
+.shi-sp .b-spoiler label[style*="none"]::after {
+    content: 'Закрыть';
+    background: #47d175;
+    color: #fff;
+}
+.shi-sp .b-spoiler:hover label[style*="none"]::after {
+    content: 'Закрыть';
+    background: #39c668;
+    color: #fff;
+}
+
+/* Скрываем лишнее */
+.shi-sp .b-spoiler .content,
+.shi-sp .b-spoiler .content:hover {
+    background: transparent;
+    padding: 0;
+}
+
+.shi-sp .b-spoiler .content .before:before,
+.shi-sp .b-spoiler .content .after {
+    display: none;
+}
+/* Спойлеры */
+
+
+
+/* Персонажи и аниме в профиле */
+.p-profiles-show .b-catalog_entry .cover .image-decor img {
+    transition: all 0.5s ease;
+}
+
+.p-profiles-show .b-catalog_entry:hover .cover .image-decor img {
+    transform: scale(1.2);
+    filter: brightness(70%) blur(1px);
+}
+
+.p-profiles-show .b-catalog_entry .cover .title.two_lined {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FAFAFA !important;
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+    word-break: break-word;
+    white-space: nowrap;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.p-profiles-show .b-catalog_entry:hover .cover .title.two_lined {
+    background: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    padding: 77.4% 5px;
+    line-height: 16px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.p-profiles-show .cc-9-g15>.c-column,
+.p-profiles-show .cc-8-g15>.c-column,
+.p-profiles-show .cc-7-g15>.c-column,
+.p-profiles-show .cc-6-g15>.c-column {
+    margin-bottom: 15px;
+}
+/* Персонажи и аниме в профиле */
+
+
+
+/* Скроллбар */
+::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 0px;
+    height: 0px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    background-color: rgb(var(--c1));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b3b3b3;
+}
+
+::-webkit-scrollbar-corner {
+    background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+/* Скроллбар */
+
+/* -------------------- Ваши наработки -------------------- */
