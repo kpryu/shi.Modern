@@ -3287,8 +3287,8 @@ code {
 .p-clubs-edit .l-content .block.edit-page > .b-form,
 .p-clubs-edit .l-content .block.b-edit_styles .b-form,
 .p-clubs .b-comment .b-form,
-.p-user_rates-index > .block.is-own-profile,
-.p-user_rates > .block.is-own-profile,
+.p-user_rates-index .block.is-own-profile,
+.p-user_rates .block.is-own-profile,
 .p-user_history .l-page div > .block > .block {
   background: none;
   border: none !important;
