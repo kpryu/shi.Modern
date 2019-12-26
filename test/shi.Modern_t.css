@@ -3288,6 +3288,7 @@ code {
 .p-clubs-edit .l-content .block.b-edit_styles .b-form,
 .p-clubs .b-comment .b-form,
 .p-user_rates-index > .block.is-own-profile,
+.p-user_rates > .block.is-own-profile,
 .p-user_history .l-page div > .block > .block {
   background: none;
   border: none !important;
@@ -3857,7 +3858,7 @@ header.head h2 a.back:before,
   margin-bottom: 76px !important;
 }
 
-.block.edit-page.account {
+.block.edit-page {
   margin-top: 52px;
 }
 
