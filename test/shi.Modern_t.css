@@ -3298,8 +3298,8 @@ code {
 .p-user_rates .block.is-own-profile {
   background: none;
   border: none;
-  margin: none;
-  padding: none;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .b-options-floated a,
