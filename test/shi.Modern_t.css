@@ -716,7 +716,8 @@ header.head a.edit:active,
 .l-top_menu-v2 .icon-calendar:before,
 .l-top_menu-v2 .icon-info:before,
 .l-top_menu-v2 .icon-socials:before,
-.l-top_menu-v2 .icon-moderation:before {
+.l-top_menu-v2 .icon-moderation:before,
+.l-top_menu-v2 .icon-articles::before {
   display: none;
 }
 
@@ -3237,7 +3238,8 @@ code {
 .p-people-collections .l-content .subheadline,
 .p-achievements-group .block,
 .p-userlist_comparer-show .l-content,
-.block.is-own-profile {
+.block.is-own-profile,
+.p-user_history .l-page div > .block {
   background: var(--b2);
   border: 1px solid var(--b3);
   border-radius: 4px;
@@ -3284,7 +3286,9 @@ code {
 .p-anime_videos-edit .b-form > .block,
 .p-clubs-edit .l-content .block.edit-page > .b-form,
 .p-clubs-edit .l-content .block.b-edit_styles .b-form,
-.p-clubs .b-comment .b-form {
+.p-clubs .b-comment .b-form,
+.p-user_rates-index > .block.is-own-profile,
+.p-user_history .l-page div > .block > .block {
   background: none;
   border: none !important;
   border-radius: 4px;
@@ -3851,6 +3855,10 @@ header.head h2 a.back:before,
 .p-profiles-edit h2.subheadline.m10,
 .p-clubs-edit h2.subheadline.m10 {
   margin-bottom: 76px !important;
+}
+
+.block.edit-page.account {
+  margin-top: 52px;
 }
 
 .p-profiles-edit .b-options-floated.mobile-phone,
