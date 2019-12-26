@@ -2288,7 +2288,8 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 .buttons .item-abuse,
 .buttons .item-ban,
 .buttons .item-ignore,
-.buttons .item-ignore.selected {
+.buttons .item-ignore.selected,
+.buttons .editor-file {
   padding: 8px;
   margin: 0 0 0 10px;
   border-radius: 4px;
@@ -2316,7 +2317,8 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 .buttons .item-abuse:hover,
 .buttons .item-ban:hover,
 .buttons .item-ignore:hover,
-.buttons .item-ignore.selected:hover {
+.buttons .item-ignore.selected:hover,
+.buttons .editor-file:hover {
   background: var(--d2);
   color: rgb(var(--c1));
 }
@@ -2343,7 +2345,8 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
 .buttons .item-abuse:active,
 .buttons .item-ban:active,
 .buttons .item-ignore:active,
-.buttons .item-ignore.selected:active {
+.buttons .item-ignore.selected:active,
+.buttons .editor-file:active {
   background: var(--d2);
   color: rgb(var(--c2));
 }
@@ -2469,8 +2472,12 @@ body[data-locale='en'] .b-show_more-more .hide-more:before {
   margin-top: 0;
 }
 
+.b-shiki_editor .controls {
+  height: 42px;
+}
+
 .b-shiki_editor aside.buttons {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 
 .b-shiki_editor .links,
@@ -5800,8 +5807,8 @@ img.b-poster {
   background: none;
   border: none;
   position: absolute;
-  top: 154px;
-  right: 25px;
+  top: 36px;
+  left: 25px;
   padding: 0;
   text-transform: uppercase;
   z-index: 1;
@@ -5817,6 +5824,7 @@ img.b-poster {
   margin: 0 4px;
   font-size: 0;
   border: none;
+  border-radius: 4px;
   color: var(--t3);
 }
 
