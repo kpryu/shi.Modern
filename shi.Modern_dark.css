@@ -148,7 +148,7 @@ body {
 
 
 /* Вернуть стандартные эллементы /*
-Удалите нужное правило чтобы вернуть определённый эллемент */
+Удалите нужное правило чтобы вернуть определённый элемент */
 
 /* Клубы */
 .p-profiles-show .profile-content .c-right > .cc-2a > .c-column:last-child {
@@ -258,6 +258,10 @@ body {
   background: var(--b1);
   background-size: cover;
   background-attachment: fixed;
+}
+
+div.block.edit-page.styles {
+  margin-top: 65px
 }
 
 .l-page {
